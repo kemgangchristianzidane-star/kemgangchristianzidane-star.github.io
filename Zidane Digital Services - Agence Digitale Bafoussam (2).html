@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZIDANE DIGITAL SERVICES | Innover • Créer • Propulser — Bafoussam, Cameroun</title>
+    <meta name="description" content="Agence de marketing digital, création graphique, vidéos publicitaires, réseaux sociaux et intelligence artificielle basée à Bafoussam, Cameroun.">
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            950: '#040711',
+                            900: '#070B1E',
+                            800: '#0D1433',
+                            700: '#141E46',
+                        },
+                        brand: {
+                            purple: '#7C3AED',
+                            violet: '#8B5CF6',
+                            blue: '#2563EB',
+                            cyan: '#00E5FF',
+                            whatsapp: '#25D366',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Styles personnalisés pour les effets néon, glassmorphism et animations */
+        body {
+            background-color: #040711;
+            color: #F8FAFC;
+            overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(13, 20, 51, 0.55);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(139, 92, 246, 0.22);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 229, 255, 0.5);
+            box-shadow: 0 12px 35px -10px rgba(124, 58, 237, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .glass-nav {
+            background: rgba(4, 7, 17, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.18);
+        }
+
+        .text-gradient-cyan {
+            background: linear-gradient(90deg, #00E5FF 0%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-brand {
+            background: linear-gradient(135deg, #00E5FF 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(124, 58, 237, 0.07) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 229, 255, 0.07) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .glow-purple {
+            box-shadow: 0 0 40px rgba(124, 58, 237, 0.45);
+        }
+
+        .glow-whatsapp {
+            box-shadow: 0 8px 25px -4px rgba(37, 211, 102, 0.45);
+        }
+
+        .glow-whatsapp:hover {
+            box-shadow: 0 12px 32px -2px rgba(37, 211, 102, 0.65);
+        }
+
+        /* Animation au défilement */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Custom checkbox pour le simulateur */
+        .service-checkbox:checked + div {
+            border-color: #00E5FF;
+            background: rgba(0, 229, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+        }
+        .service-checkbox:checked + div .check-indicator {
+            background-color: #00E5FF;
+            border-color: #00E5FF;
+            color: #040711;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-purple selection:text-white">
+
+    <!-- ==================== BARRE DE NAVIGATION (STICKY) ==================== -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo SVG fidèle à l'identité visuelle -->
+                <a href="#accueil" class="flex items-center gap-3 group">
+                    <div class="relative w-11 h-11 rounded-xl bg-gradient-to-br from-brand-violet to-brand-purple flex items-center justify-center shadow-lg shadow-brand-purple/40 group-hover:scale-105 transition-transform">
+                        <span class="font-display font-extrabold text-2xl text-white tracking-tighter">Z</span>
+                        <!-- Point cyan caractéristique en haut à droite -->
+                        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-brand-cyan border-2 border-dark-950"></span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-lg sm:text-xl tracking-wide text-white leading-none">
+                            ZIDANE
+                        </span>
+                        <span class="text-[10px] sm:text-xs font-semibold tracking-[0.18em] text-slate-300 mt-0.5">
+                            DIGITAL SERVICES
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#accueil" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors">Accueil</a>
+                    <a href="#services" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors">Services</a>
+                    <a href="#tarifs" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors">Packs & Tarifs</a>
+                    <a href="#simulateur" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors">Simulateur Devis</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-300 hover:text-brand-cyan transition-colors">Contact</a>
+                </nav>
+
+                <!-- Bouton Action Desktop + Bouton Menu Mobile -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20professionnaliser%20ma%20communication%20digitale." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-brand-whatsapp hover:bg-emerald-500 text-dark-950 font-display font-bold text-sm transition-all glow-whatsapp">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Discuter</span>
+                    </a>
+
+                    <!-- Bouton Hamburger Mobile -->
+                    <button id="mobile-menu-btn" aria-label="Ouvrir le menu" class="md:hidden p-2.5 rounded-xl glass-card text-white hover:text-brand-cyan focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Déroulant -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-900/95 backdrop-blur-xl border-b border-brand-purple/20 px-4 pt-2 pb-6 space-y-2">
+            <a href="#accueil" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-brand-purple/20 hover:text-brand-cyan">Accueil</a>
+            <a href="#services" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-brand-purple/20 hover:text-brand-cyan">Nos 5 Services</a>
+            <a href="#tarifs" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-brand-purple/20 hover:text-brand-cyan">Packs & Tarifs (FCFA)</a>
+            <a href="#simulateur" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-brand-purple/20 hover:text-brand-cyan">Simulateur de Devis</a>
+            <a href="#contact" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-slate-200 hover:bg-brand-purple/20 hover:text-brand-cyan">Contact & Localisation</a>
+            <div class="pt-2">
+                <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services." 
+                   target="_blank" rel="noopener noreferrer"
+                   class="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl bg-brand-whatsapp text-dark-950 font-display font-bold text-base shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                    Contactez-nous sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== SECTION 1 : HERO SECTION ==================== -->
+    <section id="accueil" class="relative pt-28 pb-16 lg:pt-36 lg:pb-24 overflow-hidden bg-grid-pattern">
+        <!-- Halos lumineux d'arrière-plan -->
+        <div class="absolute top-20 -left-32 w-96 h-96 bg-brand-purple/30 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-10 -right-32 w-96 h-96 bg-brand-cyan/20 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Colonne Gauche : Accroche & CTA -->
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <!-- Badge Partenaire -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full glass-card mb-6 border-brand-cyan/30">
+                        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-ping"></span>
+                        <span class="text-xs sm:text-sm font-display font-bold tracking-wider uppercase text-brand-cyan">
+                            Votre Partenaire Digital • Bafoussam
+                        </span>
+                    </div>
+
+                    <!-- Titre Principal identique à l'affiche -->
+                    <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.12] tracking-tight text-white mb-6">
+                        VOTRE ACTIVITÉ <br>
+                        <span class="text-gradient-cyan">MÉRITE PLUS DE</span> <br>
+                        <span class="inline-block mt-2 px-5 py-1.5 rounded-2xl bg-gradient-to-r from-brand-purple to-brand-blue text-white shadow-xl shadow-brand-purple/40 border border-white/15">
+                            VISIBILITÉ.
+                        </span>
+                    </h1>
+
+                    <!-- Sous-titre -->
+                    <p class="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+                        Vous souhaitez professionnaliser votre communication digitale ? 
+                        <span class="text-brand-cyan font-semibold">Nous sommes là pour vous accompagner !</span> 
+                        De la création visuelle aux campagnes publicitaires et à l'IA, propulsez votre marque vers de nouveaux sommets.
+                    </p>
+
+                    <!-- Boutons d'Action -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20professionnaliser%20ma%20communication%20digitale." 
+                           target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-brand-whatsapp hover:from-emerald-400 hover:to-emerald-500 text-dark-950 font-display font-extrabold text-base sm:text-lg transition-all glow-whatsapp group">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i>
+                            <span>Contactez-nous sur WhatsApp</span>
+                            <span class="w-7 h-7 rounded-full bg-dark-950/15 flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </span>
+                        </a>
+
+                        <a href="#tarifs" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-2xl glass-card hover:bg-brand-purple/20 text-white font-display font-bold text-base sm:text-lg border border-brand-violet/40">
+                            <span>Découvrir nos Packs</span>
+                            <i class="fa-solid fa-chevron-down text-brand-cyan text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Slogan -->
+                    <div class="mt-8 flex items-center justify-center lg:justify-start gap-3 text-xs sm:text-sm font-display font-bold tracking-[0.25em] text-slate-400 uppercase">
+                        <span>INNOVER</span>
+                        <span class="text-brand-cyan">•</span>
+                        <span>CRÉER</span>
+                        <span class="text-brand-purple">•</span>
+                        <span>PROPULSER</span>
+                    </div>
+                </div>
+
+                <!-- Colonne Droite : Visuel Digital Interactif (Écosystème Réseaux & Croissance) -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md animate-float">
+                        <!-- Carte principale vitrine -->
+                        <div class="glass-card rounded-3xl p-6 sm:p-8 border-brand-cyan/30 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-purple/30 rounded-full blur-2xl"></div>
+                            
+                            <!-- En-tête de carte -->
+                            <div class="flex items-center justify-between mb-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-brand-purple flex items-center justify-center font-display font-bold text-xl">Z</div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Performance Digitale</div>
+                                        <div class="text-xs text-brand-cyan">Stratégie & Acquisition</div>
+                                    </div>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                                    +240% Visibilité
+                                </span>
+                            </div>
+
+                            <!-- Graphique de croissance stylisé SVG -->
+                            <div class="bg-dark-950/70 rounded-2xl p-4 mb-6 border border-white/5">
+                                <div class="flex justify-between items-end h-32 gap-2 pt-4">
+                                    <div class="w-full bg-brand-blue/40 rounded-t-lg h-[35%] relative group"></div>
+                                    <div class="w-full bg-brand-blue/60 rounded-t-lg h-[50%]"></div>
+                                    <div class="w-full bg-brand-purple/70 rounded-t-lg h-[68%]"></div>
+                                    <div class="w-full bg-brand-violet rounded-t-lg h-[82%]"></div>
+                                    <div class="w-full bg-gradient-to-t from-brand-purple to-brand-cyan rounded-t-lg h-[100%] relative shadow-lg shadow-brand-cyan/30">
+                                        <span class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold text-brand-cyan bg-dark-900 px-1.5 py-0.5 rounded border border-brand-cyan/40">MAX</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-slate-400 mt-2 font-medium">
+                                    <span>Mois 1</span>
+                                    <span>Mois 2</span>
+                                    <span>Mois 3</span>
+                                    <span>Mois 4</span>
+                                    <span class="text-brand-cyan font-bold">Objectif</span>
+                                </div>
+                            </div>
+
+                            <!-- Écosystème des plateformes maîtrisées -->
+                            <div class="grid grid-cols-5 gap-2.5 text-center">
+                                <div class="p-2.5 rounded-xl bg-blue-600/20 border border-blue-500/30 text-blue-400 hover:scale-110 transition-transform" title="Facebook Ads & Pages">
+                                    <i class="fa-brands fa-facebook-f text-lg"></i>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-pink-600/20 border border-pink-500/30 text-pink-400 hover:scale-110 transition-transform" title="Instagram & Reels">
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-cyan-500/20 border border-cyan-400/30 text-brand-cyan hover:scale-110 transition-transform" title="TikTok Vidéos Virales">
+                                    <i class="fa-brands fa-tiktok text-lg"></i>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-brand-whatsapp hover:scale-110 transition-transform" title="WhatsApp Business">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                </div>
+                                <div class="p-2.5 rounded-xl bg-amber-500/20 border border-amber-400/30 text-amber-400 hover:scale-110 transition-transform" title="Intelligence Artificielle">
+                                    <i class="fa-solid fa-microchip text-lg"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Badge flottant IA -->
+                        <div class="hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl glass-card border-brand-cyan/40 absolute -bottom-5 -left-6 shadow-xl">
+                            <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-white">
+                                <i class="fa-solid fa-wand-magic-sparkles text-sm"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-white">Propulsé par l'IA</div>
+                                <div class="text-[10px] text-slate-300">Visuels & Vidéos Next-Gen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BANDEAU DES 4 PROMESSES DE VALEUR (Fidèle au bas de ton affiche) -->
+            <div class="mt-16 lg:mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                <div class="glass-card rounded-2xl p-5 flex items-center gap-4 border-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-brand-blue/20 border border-brand-blue/40 flex items-center justify-center text-brand-cyan shrink-0">
+                        <i class="fa-solid fa-chart-simple text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-base">Plus de visibilité</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Touchez des milliers de prospects qualifiés</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 flex items-center gap-4 border-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center text-brand-violet shrink-0">
+                        <i class="fa-solid fa-users text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-base">Plus de clients</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Convertissez votre audience en ventes réelles</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 flex items-center gap-4 border-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-brand-cyan shrink-0">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-base">Image professionnelle</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Une identité visuelle crédible et moderne</p>
+                    </div>
+                </div>
+
+                <div class="glass-card rounded-2xl p-5 flex items-center gap-4 border-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 shrink-0">
+                        <i class="fa-solid fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-base">Croissance durable</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Des stratégies pérennes pour votre activité</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 2 : NOS 5 PILIERS DE SERVICES ==================== -->
+    <section id="services" class="py-20 lg:py-28 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- En-tête de section -->
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-brand-purple/20 border border-brand-purple/40 text-brand-cyan text-xs font-display font-bold uppercase tracking-widest mb-3">
+                    Nos Domaines d'Expertise
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+                    Des solutions digitales <span class="text-gradient-brand">complètes & sur-mesure</span>
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Nous combinons créativité graphique, stratégie marketing et puissance de l'intelligence artificielle pour démarquer votre entreprise de la concurrence.
+                </p>
+            </div>
+
+            <!-- Grille des 5 Services (exactement les 5 icônes de l'affiche) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- Service 1 : Création Graphique -->
+                <div class="glass-card rounded-3xl p-7 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-pink-500/30 mb-6">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Création Graphique</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Donnez une identité forte et mémorable à votre marque grâce à des visuels percutants conçus pour capter l'attention dès la première seconde.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Création de logos & chartes graphiques</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Affiches publicitaires, flyers & brochures</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Menus restaurants, étiquettes & visuels produits</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20un%20devis%20pour%20de%20la%20Cr%C3%A9ation%20Graphique." target="_blank" class="inline-flex items-center gap-2 text-sm font-display font-bold text-brand-cyan hover:text-white transition-colors">
+                        <span>Commander un design</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 : Vidéos Publicitaires -->
+                <div class="glass-card rounded-3xl p-7 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-blue-500/30 mb-6">
+                            <i class="fa-solid fa-video"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Vidéos Publicitaires</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            La vidéo est le format roi sur les réseaux sociaux. Nous réalisons des spots dynamiques qui présentent vos offres et déclenchent l'achat.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Spots promotionnels Facebook, Instagram & TikTok</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Animations de logos & motion design</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Montage dynamique avec sous-titres & voix-off</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20cr%C3%A9er%20une%20Vid%C3%A9o%20Publicitaire." target="_blank" class="inline-flex items-center gap-2 text-sm font-display font-bold text-brand-cyan hover:text-white transition-colors">
+                        <span>Lancer ma vidéo</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 : Réseaux Sociaux -->
+                <div class="glass-card rounded-3xl p-7 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-brand-violet to-purple-700 flex items-center justify-center text-white text-2xl shadow-lg shadow-brand-purple/30 mb-6">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Réseaux Sociaux</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Déléguez la gestion quotidienne de vos pages professionnelles. Nous animons votre communauté et transformons vos abonnés en clients fidèles.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Création & optimisation de pages pro</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Planification éditoriale & publications régulières</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Stratégie de conversion WhatsApp Business</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20veux%20confier%20la%20gestion%20de%20mes%20R%C3%A9seaux%20Sociaux." target="_blank" class="inline-flex items-center gap-2 text-sm font-display font-bold text-brand-cyan hover:text-white transition-colors">
+                        <span>Confier mes pages</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 : Marketing Digital -->
+                <div class="glass-card rounded-3xl p-7 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-emerald-500/30 mb-6">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-xl text-white mb-3">Marketing Digital & Ads</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                            Ne laissez plus vos ventes au hasard. Nous déployons des campagnes publicitaires ciblées (sponsoring pro) pour générer des messages et commandes chaque jour.
+                        </p>
+                        <ul class="space-y-2 text-xs text-slate-400 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Campagnes Facebook & Instagram Ads ciblées</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Ciblage géographique précis (Bafoussam, Douala, Yaoundé...)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-cyan"></i> Création de sites web vitrines & tunnels de vente</li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20lancer%20une%20campagne%20de%20Publicit%C3%A9%20en%20ligne." target="_blank" class="inline-flex items-center gap-2 text-sm font-display font-bold text-brand-cyan hover:text-white transition-colors">
+                        <span>Booster mes ventes</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 : Intelligence Artificielle (Mis en avant sur 2 colonnes sur tablette/desktop) -->
+                <div class="glass-card rounded-3xl p-7 flex flex-col justify-between md:col-span-2 lg:col-span-2 border-brand-cyan/30 bg-gradient-to-br from-dark-800/80 to-brand-purple/15 reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                        <div class="lg:col-span-8">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/40 text-amber-300 text-[11px] font-bold uppercase tracking-wider mb-4">
+                                <i class="fa-solid fa-sparkles"></i> Innovation & Technologie
+                            </div>
+                            <div class="flex items-center gap-4 mb-3">
+                                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-white text-2xl shadow-lg shadow-amber-500/30 shrink-0">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <h3 class="font-display font-bold text-2xl text-white">Intelligence Artificielle Appliquée</h3>
+                            </div>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                                Prenez une longueur d'avance grâce aux dernières technologies d'IA générative. Nous créons des visuels publicitaires ultra-réalistes, des avatars parlants et des vidéos promotionnelles dignes d'un studio cinéma à coût maîtrisé.
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 mb-5">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Mise en scène produits par IA</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Vidéos publicitaires IA haute qualité</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Rédaction persuasive (Copywriting IA)</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-400"></i> Automatisation de réponses clients</div>
+                            </div>
+                            <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20vos%20services%20d'Intelligence%20Artificielle." target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-dark-950 border border-amber-400/40 font-display font-bold text-sm transition-all">
+                                <span>Découvrir la puissance de l'IA</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </a>
+                        </div>
+
+                        <div class="lg:col-span-4 hidden lg:flex flex-col items-center justify-center p-6 rounded-2xl bg-dark-950/60 border border-amber-400/20 text-center">
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-500/20 to-brand-cyan/20 border border-amber-400/40 flex items-center justify-center mb-3 animate-pulse-slow">
+                                <i class="fa-solid fa-robot text-3xl text-amber-400"></i>
+                            </div>
+                            <div class="font-display font-bold text-white text-sm">Contenu 3x plus rapide</div>
+                            <div class="text-xs text-slate-400 mt-1">Impact visuel maximal sur vos prospects</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 3 : PACKS & TARIFS (MARCHÉ CAMEROUNAIS FCFA) ==================== -->
+    <section id="tarifs" class="py-20 lg:py-28 relative bg-dark-900/60 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- En-tête Tarifs -->
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-xs font-display font-bold uppercase tracking-widest mb-3">
+                    Tarifs Transparents & Adaptés
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+                    Choisissez le <span class="text-gradient-cyan">Pack idéal</span> pour votre croissance
+                </h2>
+                <p class="text-slate-400 text-base sm:text-lg">
+                    Des formules étudiées pour les entrepreneurs, commerces, PME et marques au Cameroun. Sans engagement caché.
+                </p>
+
+                <!-- Sélecteur d'onglets : Packs Mensuels vs Prestations à la Carte -->
+                <div class="inline-flex p-1.5 rounded-2xl bg-dark-950 border border-brand-purple/30 mt-8">
+                    <button id="tab-packs" onclick="switchPricingTab('packs')" class="px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all bg-gradient-to-r from-brand-purple to-brand-blue text-white shadow-lg">
+                        Packs Mensuels (Tout-en-un)
+                    </button>
+                    <button id="tab-carte" onclick="switchPricingTab('carte')" class="px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all text-slate-400 hover:text-white">
+                        Prestations à la Carte
+                    </button>
+                </div>
+            </div>
+
+            <!-- VUE 1 : LES 3 PACKS MENSUELS -->
+            <div id="view-packs" class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- PACK 1 : DÉMARRAGE -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-brand-blue/20 text-blue-300 text-xs font-bold uppercase tracking-wider">Essentiel</span>
+                            <i class="fa-solid fa-seedling text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Pack Démarrage</h3>
+                        <p class="text-slate-400 text-sm mb-6">Idéal pour lancer votre présence professionnelle et publier régulièrement.</p>
+                        
+                        <div class="pb-6 mb-6 border-b border-white/10">
+                            <div class="flex items-baseline gap-1.5">
+                                <span class="font-display font-extrabold text-4xl text-white">65 000</span>
+                                <span class="font-display font-bold text-brand-cyan text-lg">FCFA</span>
+                                <span class="text-slate-400 text-sm">/ mois</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Gestion d'<strong>1 réseau social</strong> (Facebook ou Instagram)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>8 visuels graphiques</strong> professionnels / mois</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>1 vidéo courte / Reel</strong> promotionnel</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Rédaction des textes & hashtags vendeurs</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Calendrier éditorial & programmation</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20souscrire%20au%20*Pack%20D%C3%A9marrage%20(65%20000%20FCFA%2Fmois)*." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full py-3.5 px-6 rounded-2xl bg-white/10 hover:bg-brand-whatsapp text-white hover:text-dark-950 font-display font-bold text-center transition-all flex items-center justify-center gap-2 border border-white/15 hover:border-transparent">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Choisir ce Pack</span>
+                    </a>
+                </div>
+
+                <!-- PACK 2 : CROISSANCE (LE PLUS POPULAIRE) -->
+                <div class="relative rounded-3xl p-8 flex flex-col justify-between bg-gradient-to-b from-brand-purple/30 via-dark-800/90 to-dark-900 border-2 border-brand-cyan shadow-2xl shadow-brand-purple/30 lg:-translate-y-3 reveal">
+                    <!-- Badge Populaire -->
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-brand-cyan to-brand-blue text-dark-950 font-display font-extrabold text-xs uppercase tracking-wider shadow-lg">
+                        ⭐ Le plus populaire
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4 mt-2">
+                            <span class="px-3 py-1 rounded-lg bg-brand-cyan/20 text-brand-cyan text-xs font-bold uppercase tracking-wider">Performance</span>
+                            <i class="fa-solid fa-fire text-brand-cyan text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Pack Croissance</h3>
+                        <p class="text-slate-300 text-sm mb-6">La formule complète pour attirer de nouveaux clients chaque semaine grâce à la pub et l'IA.</p>
+                        
+                        <div class="pb-6 mb-6 border-b border-white/15">
+                            <div class="flex items-baseline gap-1.5">
+                                <span class="font-display font-extrabold text-4xl sm:text-5xl text-white">125 000</span>
+                                <span class="font-display font-bold text-brand-cyan text-lg">FCFA</span>
+                                <span class="text-slate-300 text-sm">/ mois</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-200 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Gestion de <strong>2 réseaux</strong> (Facebook + Instagram) & stratégie WhatsApp</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>12 visuels HD</strong> sur-mesure / mois</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>2 vidéos publicitaires / Reels IA</strong> captivants</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Lancement & suivi de <strong>2 campagnes Facebook/Insta Ads</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Bilan des performances & recommandations mensuelles</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20souscrire%20au%20*Pack%20Croissance%20(125%20000%20FCFA%2Fmois)*." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full py-4 px-6 rounded-2xl bg-brand-whatsapp hover:bg-emerald-400 text-dark-950 font-display font-extrabold text-center transition-all flex items-center justify-center gap-2 glow-whatsapp">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Démarrer avec ce Pack</span>
+                    </a>
+                </div>
+
+                <!-- PACK 3 : BUSINESS PRO -->
+                <div class="glass-card rounded-3xl p-8 flex flex-col justify-between reveal">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-lg bg-brand-purple/25 text-brand-violet text-xs font-bold uppercase tracking-wider">Domination</span>
+                            <i class="fa-solid fa-crown text-amber-400 text-xl"></i>
+                        </div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Pack Business Pro</h3>
+                        <p class="text-slate-400 text-sm mb-6">Accompagnement intensif pour les entreprises ambitieuses qui veulent dominer leur secteur.</p>
+                        
+                        <div class="pb-6 mb-6 border-b border-white/10">
+                            <div class="flex items-baseline gap-1.5">
+                                <span class="font-display font-extrabold text-4xl text-white">220 000</span>
+                                <span class="font-display font-bold text-brand-cyan text-lg">FCFA</span>
+                                <span class="text-slate-400 text-sm">/ mois</span>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-3.5 text-sm text-slate-300 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Gestion <strong>Multi-réseaux</strong> (Facebook, Instagram, TikTok)</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>20 visuels HD</strong> & déclinaisons stories / mois</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span><strong>4 vidéos publicitaires & animations IA</strong></span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Gestion continue des campagnes Ads & reciblage</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                <span>Modération prioritaire & suivi stratégique hebdomadaire</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20souscrire%20au%20*Pack%20Business%20Pro%20(220%20000%20FCFA%2Fmois)*." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full py-3.5 px-6 rounded-2xl bg-white/10 hover:bg-brand-whatsapp text-white hover:text-dark-950 font-display font-bold text-center transition-all flex items-center justify-center gap-2 border border-white/15 hover:border-transparent">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Choisir ce Pack</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- VUE 2 : PRESTATIONS À LA CARTE (Masquée par défaut) -->
+            <div id="view-carte" class="hidden grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-pink-500/20 text-pink-400"><i class="fa-solid fa-pen-nib"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">35 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Création de Logo Professionnel</h4>
+                        <p class="text-xs text-slate-400 mb-4">3 propositions créatives, retouches incluses, livraison en haute définition (PNG transparent, PDF, vectoriel).</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20commander%20un%20Logo%20Professionnel%20(35%20000%20FCFA)." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Commander sur WhatsApp</a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-purple-500/20 text-purple-400"><i class="fa-solid fa-layer-group"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">90 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Identité Visuelle Complète</h4>
+                        <p class="text-xs text-slate-400 mb-4">Logo pro + Charte graphique (couleurs & typographies) + Carte de visite + Flyer + Bannière réseaux sociaux.</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20commander%20une%20Identit%C3%A9%20Visuelle%20Compl%C3%A8te%20(90%20000%20FCFA)." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Commander sur WhatsApp</a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-blue-500/20 text-blue-400"><i class="fa-solid fa-images"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">25 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Pack 5 Affiches / Flyers Pub</h4>
+                        <p class="text-xs text-slate-400 mb-4">5 visuels publicitaires percutants adaptés aux formats Facebook, Instagram et statuts WhatsApp.</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20commander%20le%20Pack%205%20Affiches%20Pub%20(25%20000%20FCFA)." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Commander sur WhatsApp</a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-amber-500/20 text-amber-400"><i class="fa-solid fa-film"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">30 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Vidéo Publicitaire / Animation IA</h4>
+                        <p class="text-xs text-slate-400 mb-4">Spot vidéo captivant (30 à 45 sec) avec montage dynamique, effets IA, musique et appel à l'action.</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20commander%20une%20Vid%C3%A9o%20Publicitaire%20IA%20(30%20000%20FCFA)." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Commander sur WhatsApp</a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400"><i class="fa-solid fa-bullseye"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">25 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Campagne Facebook & Insta Ads</h4>
+                        <p class="text-xs text-slate-400 mb-4">Paramétrage professionnel, ciblage d'audience qualifiée, rédaction de l'annonce et optimisation (hors budget Meta).</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20lancer%20une%20Campagne%20Meta%20Ads%20(25%20000%20FCFA)." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Commander sur WhatsApp</a>
+                </div>
+
+                <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="p-2.5 rounded-xl bg-cyan-500/20 text-brand-cyan"><i class="fa-solid fa-globe"></i></span>
+                            <span class="font-display font-extrabold text-xl text-brand-cyan">Dès 150 000 FCFA</span>
+                        </div>
+                        <h4 class="font-display font-bold text-lg text-white mb-2">Site Web Vitrine Responsive</h4>
+                        <p class="text-xs text-slate-400 mb-4">Création de votre site web moderne adapté mobile & ordinateur avec intégration WhatsApp et référencement.</p>
+                    </div>
+                    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20un%20devis%20pour%20la%20cr%C3%A9ation%20d'un%20Site%20Web." target="_blank" class="text-xs font-bold text-white bg-white/10 hover:bg-brand-whatsapp hover:text-dark-950 py-2.5 px-4 rounded-xl text-center transition-colors">Demander un devis</a>
+                </div>
+
+            </div>
+
+            <!-- Note importante sur le budget publicitaire -->
+            <div class="mt-10 text-center">
+                <p class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-400 bg-dark-950/80 px-4 py-2.5 rounded-xl border border-white/10">
+                    <i class="fa-solid fa-circle-info text-brand-cyan"></i>
+                    <span>Note : Les budgets publicitaires versés directement à Meta (Facebook / Instagram) sont à la charge du client selon ses objectifs.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 4 : SIMULATEUR DE DEVIS INTERACTIF ==================== -->
+    <section id="simulateur" class="py-20 lg:py-28 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-6 sm:p-10 lg:p-12 border-brand-cyan/30 relative overflow-hidden reveal">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-purple/25 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="inline-block px-3 py-1 rounded-full bg-brand-purple/20 text-brand-cyan text-xs font-display font-bold uppercase tracking-wider mb-3">
+                        Composez votre offre
+                    </span>
+                    <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-white mb-3">
+                        Simulateur de Devis Instantané
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Cochez les prestations dont vous avez besoin pour estimer votre budget et envoyez-nous directement votre demande sur WhatsApp.
+                    </p>
+                </div>
+
+                <!-- Grille des options sélectionnables -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8" id="quote-options">
+                    
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Création Logo Pro" data-price="35000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Création de Logo Pro</div>
+                                    <div class="text-xs text-slate-400">Identité & fichiers HD</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">35 000 FCFA</span>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Pack 5 Affiches Pub" data-price="25000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Pack 5 Affiches Pub</div>
+                                    <div class="text-xs text-slate-400">Visuels réseaux & WhatsApp</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">25 000 FCFA</span>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Vidéo Publicitaire / IA" data-price="30000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Vidéo Publicitaire / IA</div>
+                                    <div class="text-xs text-slate-400">Spot promo 30-45s</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">30 000 FCFA</span>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Gestion Réseaux (1 mois)" data-price="65000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Gestion Réseaux (1 mois)</div>
+                                    <div class="text-xs text-slate-400">Animation & publications</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">65 000 FCFA</span>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Campagne Meta Ads" data-price="25000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Campagne Facebook/Insta Ads</div>
+                                    <div class="text-xs text-slate-400">Ciblage & sponsorisation pro</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">25 000 FCFA</span>
+                        </div>
+                    </label>
+
+                    <label class="cursor-pointer block">
+                        <input type="checkbox" class="hidden service-checkbox" data-name="Site Web Vitrine" data-price="150000">
+                        <div class="p-4 rounded-2xl bg-dark-950/70 border border-white/10 transition-all flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <span class="check-indicator w-5 h-5 rounded-md border border-slate-500 flex items-center justify-center text-xs transition-colors">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+                                <div>
+                                    <div class="font-display font-bold text-sm text-white">Site Web Vitrine</div>
+                                    <div class="text-xs text-slate-400">Design moderne 100% mobile</div>
+                                </div>
+                            </div>
+                            <span class="font-display font-bold text-sm text-brand-cyan">150 000 FCFA</span>
+                        </div>
+                    </label>
+
+                </div>
+
+                <!-- Barre de total & Bouton d'envoi WhatsApp -->
+                <div class="p-6 rounded-2xl bg-dark-950 border border-brand-purple/40 flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div class="text-center sm:text-left">
+                        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Estimation totale</div>
+                        <div class="font-display font-extrabold text-3xl sm:text-4xl text-white mt-1">
+                            <span id="quote-total">0</span> <span class="text-brand-cyan text-xl">FCFA</span>
+                        </div>
+                        <div id="quote-count" class="text-xs text-slate-400 mt-1">Aucun service sélectionné</div>
+                    </div>
+
+                    <a id="quote-whatsapp-btn" 
+                       href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20je%20souhaite%20un%20devis%20personnalis%C3%A9." 
+                       target="_blank" rel="noopener noreferrer"
+                       class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-brand-whatsapp hover:bg-emerald-400 text-dark-950 font-display font-extrabold text-base transition-all glow-whatsapp flex items-center justify-center gap-2.5">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span>Envoyer ce devis sur WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECTION 5 : CONTACT & LOCALISATION ==================== -->
+    <section id="contact" class="py-20 relative bg-dark-900/80 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Infos de contact -->
+                <div class="lg:col-span-6 reveal">
+                    <span class="inline-block px-3.5 py-1 rounded-full bg-brand-cyan/15 border border-brand-cyan/30 text-brand-cyan text-xs font-display font-bold uppercase tracking-widest mb-4">
+                        Contactez-nous
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white mb-4">
+                        Prêt à propulser votre activité ?
+                    </h2>
+                    <p class="text-slate-300 text-base mb-8 leading-relaxed">
+                        Discutons de votre projet dès aujourd'hui. Que vous soyez à Bafoussam, Douala, Yaoundé ou à l'international, nous vous accompagnons à distance ou en présentiel.
+                    </p>
+
+                    <div class="space-y-4">
+                        <!-- Localisation -->
+                        <div class="glass-card rounded-2xl p-4 flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-brand-blue/20 text-brand-cyan flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Localisation</div>
+                                <div class="font-display font-bold text-white text-base">Basé à Bafoussam, Cameroun</div>
+                            </div>
+                        </div>
+
+                        <!-- Téléphone / WhatsApp -->
+                        <a href="https://wa.me/237691253794" target="_blank" class="glass-card rounded-2xl p-4 flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-brand-whatsapp flex items-center justify-center text-2xl shrink-0 group-hover:scale-110 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-400">Téléphone & WhatsApp Direct</div>
+                                <div class="font-display font-bold text-white text-base group-hover:text-brand-whatsapp transition-colors">+237 691 25 37 94</div>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <div class="glass-card rounded-2xl p-4 flex items-center justify-between gap-4">
+                            <div class="flex items-center gap-4 overflow-hidden">
+                                <div class="w-12 h-12 rounded-xl bg-brand-purple/20 text-brand-violet flex items-center justify-center text-xl shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="truncate">
+                                    <div class="text-xs text-slate-400">Adresse Email</div>
+                                    <a href="mailto:Kemgangchristianzidane@gmail.com" class="font-display font-bold text-white text-sm sm:text-base hover:text-brand-cyan transition-colors truncate block">
+                                        Kemgangchristianzidane@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+                            <button onclick="copyEmail()" class="px-3 py-2 rounded-xl bg-white/10 hover:bg-brand-cyan hover:text-dark-950 text-xs font-bold text-white transition-colors shrink-0" title="Copier l'email">
+                                <i class="fa-regular fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire rapide qui génère un message WhatsApp -->
+                <div class="lg:col-span-6 reveal">
+                    <div class="glass-card rounded-3xl p-7 sm:p-9 border-brand-purple/30">
+                        <h3 class="font-display font-bold text-xl text-white mb-2">Envoyez un message rapide</h3>
+                        <p class="text-xs text-slate-400 mb-6">Remplissez ces informations pour démarrer la conversation directement sur WhatsApp.</p>
+                        
+                        <form id="quick-contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Votre nom ou nom de l'entreprise</label>
+                                <input type="text" id="client-name" required placeholder="Ex: Boutique Élégance / Jean Dupont" 
+                                       class="w-full px-4 py-3 rounded-xl bg-dark-950/80 border border-white/15 text-white text-sm focus:outline-none focus:border-brand-cyan">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Service souhaité</label>
+                                <select id="client-service" class="w-full px-4 py-3 rounded-xl bg-dark-950/80 border border-white/15 text-white text-sm focus:outline-none focus:border-brand-cyan">
+                                    <option value="Pack Croissance (125 000 FCFA/mois)">Pack Croissance (125 000 FCFA/mois)</option>
+                                    <option value="Pack Démarrage (65 000 FCFA/mois)">Pack Démarrage (65 000 FCFA/mois)</option>
+                                    <option value="Pack Business Pro (220 000 FCFA/mois)">Pack Business Pro (220 000 FCFA/mois)</option>
+                                    <option value="Création Graphique (Logo / Affiches)">Création Graphique (Logo / Affiches)</option>
+                                    <option value="Vidéo Publicitaire / IA">Vidéo Publicitaire / IA</option>
+                                    <option value="Publicité Facebook / Instagram Ads">Publicité Facebook / Instagram Ads</option>
+                                    <option value="Création de Site Web">Création de Site Web</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Détails de votre besoin</label>
+                                <textarea id="client-message" rows="3" placeholder="Décrivez brièvement votre activité et vos objectifs..." 
+                                          class="w-full px-4 py-3 rounded-xl bg-dark-950/80 border border-white/15 text-white text-sm focus:outline-none focus:border-brand-cyan"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-2xl bg-brand-whatsapp hover:bg-emerald-400 text-dark-950 font-display font-extrabold text-base transition-all glow-whatsapp flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                                <span>Lancer la discussion WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-dark-950 border-t border-white/10 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <!-- Logo & Slogan -->
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-lg bg-brand-purple flex items-center justify-center font-display font-extrabold text-lg text-white">Z</div>
+                    <div>
+                        <div class="font-display font-bold text-white text-sm">ZIDANE DIGITAL SERVICES</div>
+                        <div class="text-[10px] tracking-[0.2em] text-brand-cyan font-semibold">INNOVER • CRÉER • PROPULSER</div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-xs text-slate-500 text-center">
+                    © <span id="current-year"></span> ZIDANE DIGITAL SERVICES — Bafoussam, Cameroun. Tous droits réservés.
+                </div>
+
+                <!-- Réseaux sociaux -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/237691253794" target="_blank" aria-label="WhatsApp" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-brand-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="mailto:Kemgangchristianzidane@gmail.com" aria-label="Email" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-300 hover:text-brand-cyan">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Flottant WhatsApp Permanent -->
+    <a href="https://wa.me/237691253794?text=Bonjour%20Zidane%20Digital%20Services%2C%20j'ai%20visit%C3%A9%20votre%20site%20web%20et%20je%20souhaite%20discuter%20de%20mon%20projet." 
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Contactez-nous sur WhatsApp"
+       class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-brand-whatsapp hover:bg-emerald-400 text-dark-950 flex items-center justify-center text-3xl shadow-2xl glow-whatsapp hover:scale-110 transition-transform">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Notification Toast (Remplace alert()) -->
+    <div id="toast-notification" class="fixed bottom-24 right-6 z-50 hidden px-4 py-3 rounded-xl bg-dark-800 border border-brand-cyan text-white text-xs font-semibold shadow-2xl flex items-center gap-2">
+        <i class="fa-solid fa-circle-check text-brand-cyan"></i>
+        <span id="toast-text">Adresse email copiée !</span>
+    </div>
+
+    <!-- ==================== SCRIPTS JAVASCRIPT ==================== -->
+    <script>
+        // 1. Année dynamique dans le footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // 2. Gestion du Menu Mobile Hamburger
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        // 3. Changement d'onglet Tarifs (Packs Mensuels vs À la Carte)
+        function switchPricingTab(tab) {
+            const tabPacks = document.getElementById('tab-packs');
+            const tabCarte = document.getElementById('tab-carte');
+            const viewPacks = document.getElementById('view-packs');
+            const viewCarte = document.getElementById('view-carte');
+
+            if (tab === 'packs') {
+                tabPacks.className = 'px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all bg-gradient-to-r from-brand-purple to-brand-blue text-white shadow-lg';
+                tabCarte.className = 'px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all text-slate-400 hover:text-white';
+                
+                viewPacks.classList.remove('hidden');
+                viewPacks.classList.add('grid');
+                viewCarte.classList.add('hidden');
+                viewCarte.classList.remove('grid');
+            } else {
+                tabCarte.className = 'px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all bg-gradient-to-r from-brand-purple to-brand-blue text-white shadow-lg';
+                tabPacks.className = 'px-5 sm:px-7 py-3 rounded-xl font-display font-bold text-sm transition-all text-slate-400 hover:text-white';
+                
+                viewCarte.classList.remove('hidden');
+                viewCarte.classList.add('grid');
+                viewPacks.classList.add('hidden');
+                viewPacks.classList.remove('grid');
+            }
+        }
+
+        // 4. Simulateur de Devis Interactif
+        const checkboxes = document.querySelectorAll('.service-checkbox');
+        const quoteTotalEl = document.getElementById('quote-total');
+        const quoteCountEl = document.getElementById('quote-count');
+        const quoteWhatsappBtn = document.getElementById('quote-whatsapp-btn');
+        const phoneNumber = '237691253794';
+
+        function updateQuote() {
+            let total = 0;
+            let selectedServices = [];
+
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    const price = parseInt(cb.getAttribute('data-price'), 10);
+                    const name = cb.getAttribute('data-name');
+                    total += price;
+                    selectedServices.push(`• ${name} (${price.toLocaleString('fr-FR')} FCFA)`);
+                }
+            });
+
+            // Formatage du montant en FCFA
+            quoteTotalEl.textContent = total.toLocaleString('fr-FR');
+
+            if (selectedServices.length === 0) {
+                quoteCountEl.textContent = 'Aucun service sélectionné';
+                const defaultMsg = encodeURIComponent("Bonjour Zidane Digital Services, je souhaite obtenir un devis personnalisé.");
+                quoteWhatsappBtn.href = `https://wa.me/${phoneNumber}?text=${defaultMsg}`;
+            } else {
+                quoteCountEl.textContent = `${selectedServices.length} prestation(s) sélectionnée(s)`;
+                const message = `Bonjour Zidane Digital Services,\n\nVoici mon estimation de devis depuis votre site web :\n${selectedServices.join('\n')}\n\n*Total estimé : ${total.toLocaleString('fr-FR')} FCFA*\n\nPouvez-vous me recontacter pour démarrer ?`;
+                quoteWhatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            }
+        }
+
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', updateQuote);
+        });
+
+        // 5. Formulaire de contact rapide vers WhatsApp
+        document.getElementById('quick-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('client-name').value.trim();
+            const service = document.getElementById('client-service').value;
+            const msg = document.getElementById('client-message').value.trim();
+
+            const fullText = `Bonjour Zidane Digital Services,\n\nJe m'appelle *${name}*.\nJe suis intéressé(e) par : *${service}*.\n${msg ? `\nDétails : ${msg}` : ''}`;
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullText)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        });
+
+        // 6. Copier l'email sans utiliser alert()
+        function copyEmail() {
+            const email = 'Kemgangchristianzidane@gmail.com';
+            const tempInput = document.createElement('input');
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            const toast = document.getElementById('toast-notification');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // 7. Animation d'apparition fluide au défilement (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
